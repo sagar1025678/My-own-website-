@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ending Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #880e4f;
+            overflow: hidden;
+        }
+        .message-container {
+            position: relative;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            font-size: 1.4em;
+            width: 80%;
+            max-width: 600px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .flower {
+            font-size: 2em;
+        }
+        .heart {
+            font-size: 2em;
+        }
+        .popup-message {
+            display: none;
+            padding: 20px;
+            background-color: #f8bbd0;
+            border-radius: 10px;
+            border: 2px solid #880e4f;
+            animation: popup 1s forwards;
+        }
+        @keyframes popup {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message-container">
+        <p>At last I want to say you that I love you more than anyone, you are my everything, my world, my wife, my life <span class="flower">💐</span><span class="heart">💋</span></p>
+    </div>
+
+    <script>
+        // Function to show the pop-up message after 1 second
+        setTimeout(function() {
+            var popupMessage = document.createElement('div');
+            popupMessage.classList.add('popup-message');
+            popupMessage.innerHTML = 'I love you more than words can say! <span class="heart">💖</span>';
+            document.body.appendChild(popupMessage);
+            popupMessage.style.display = 'block';
+        }, 1000);
+    </script>
+
+</body>
+</html>
