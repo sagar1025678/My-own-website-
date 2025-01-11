@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You Sanju</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            font-size: 2em;
+            color: #e91e63;
+        }
+        .hearts {
+            font-size: 2.5em;
+            animation: rain 5s linear infinite;
+        }
+        @keyframes rain {
+            0% {
+                top: -10%;
+            }
+            100% {
+                top: 100%;
+            }
+        }
+        .heart {
+            position: absolute;
+            animation: heart-fall 5s linear infinite;
+        }
+        @keyframes heart-fall {
+            0% {
+                transform: translateY(-100px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <p>I love you Sanju 💖</p>
+        <div class="hearts" id="hearts"></div>
+    </div>
+
+    <script>
+        // Function to generate "I love you Sanju" 100 times
+        function generateLove() {
+            let container = document.querySelector(".hearts");
+            for (let i = 0; i < 100; i++) {
+                let heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.innerHTML = "💖";
+                heart.style.left = `${Math.random() * 100}%`;
+                container.appendChild(heart);
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = generateLove;
+    </script>
+
+</body>
+</html>
