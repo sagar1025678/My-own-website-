@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            flex-direction: column;
+            text-align: center;
+        }
+        .message {
+            font-size: 2em;
+            color: #333;
+        }
+        .party {
+            width: 100px;
+            height: 100px;
+            background-color: #ff6347;
+            border-radius: 50%;
+            animation: partyBumper 1s ease-out forwards;
+            margin-top: 20px;
+            display: none;
+        }
+        @keyframes partyBumper {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>Welcome 🤗 Sanju to my place. I hope you will like this!</h1>
+    </div>
+    
+    <div class="party" id="partyBumper"></div>
+    
+    <button onclick="goBack()">Go Back</button>
+    
+    <script>
+        // Display party bumper after a brief delay
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('partyBumper').style.display = 'block';
+            }, 500); // Delay before party bumper appears
+        };
+
+        // Function to go back (you can customize this later)
+        function goBack() {
+            window.history.back(); // Goes to the previous page
+        }
+    </script>
+</body>
+</html>
