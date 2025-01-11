@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message to Sanju</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        .note-container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform-origin: top;
+            animation: openNote 2s forwards;
+        }
+        @keyframes openNote {
+            0% {
+                transform: scaleY(0);
+            }
+            100% {
+                transform: scaleY(1);
+            }
+        }
+        .note-content {
+            font-size: 1.2em;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="note-container">
+        <div class="note-content">
+            <p>
+                I know our relationship is getting old; it could be boring as we know everything about each other, and the long distance makes it harder, but I promise my love for you is the same 🙂<br><br>
+                We will end up marrying each other. Mero vuntu 💋 mwahhh.
+            </p>
+        </div>
+    </div>
+
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        // Function to go back (you can customize this later)
+        function goBack() {
+            window.history.back(); // Goes to the previous page
+        }
+    </script>
+
+</body>
+</html>
