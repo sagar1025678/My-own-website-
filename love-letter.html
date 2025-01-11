@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://www.transparenttextures.com/patterns/notebook.png');
+            background-size: cover;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .love-letter {
+            font-size: 1.2em;
+            line-height: 1.6;
+            white-space: pre-wrap; /* To allow the text to wrap */
+            border-left: 4px solid #333;
+            padding-left: 15px;
+            display: inline-block;
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+            width: 100%;
+        }
+        @keyframes typing {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+        .typing-effect {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 4px solid #333;
+            animation: typing 5s steps(60) 1s 1 normal both;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="love-letter">
+            <div class="typing-effect">
+                My Dearest Sanju,
+
+                I hope this letter finds you in the best of spirits. Words often fall short when I try to express how much you mean to me, but I’ll try my best to convey the depth of my feelings.
+
+                From the very first moment we met, something inside me told me that I had found someone truly special. You brought a kind of warmth and light into my life that I never knew I was missing. Every day with you feels like a beautiful new adventure, filled with laughter, understanding, and love.
+
+                Your presence fills my heart with a sense of peace and joy that I cannot put into words. You have a way of making the ordinary feel extraordinary. Whether we are talking, laughing, or simply spending time together, every moment is cherished.
+
+                Sanju, you inspire me to be the best version of myself. Your kindness, intelligence, and strength leave me in awe, and I am incredibly lucky to have you in my life. The way you love and care for those around you is something I deeply admire.
+
+                As I write this letter, I’m filled with nothing but gratitude for having you by my side. I want you to know that I’ll always be here for you, through the good times and the tough ones, just as you have always been there for me.
+
+                With you, my heart feels at home, and I can’t imagine a future without you in it. I love you more than words can express, and I look forward to spending every day with you, growing together in love and happiness.
+
+                Yours always,  
+                [Your Name]
+            </div>
+        </div>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        // Function to go back (you can customize this later)
+        function goBack() {
+            window.history.back(); // Goes to the previous page
+        }
+    </script>
+</body>
+</html>
